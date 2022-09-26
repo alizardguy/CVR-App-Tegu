@@ -8,8 +8,17 @@ class SearchPage extends StatefulWidget {
   _HomePageState createState() => new _HomePageState();
 }
 
+final myTextController = TextEditingController();
+
+// Clean up the controller when the widget is disposed.
+@override
+void dispose() {
+  myTextController.dispose();
+  //super.dispose();
+}
+
 Future loadSearch() async {
-  print("search function sent");
+  print("search: " + myTextController.text);
 }
 
 class _HomePageState extends State<SearchPage> {
@@ -28,6 +37,7 @@ class _HomePageState extends State<SearchPage> {
       child: Column(
         children: [
           TextField(
+            controller: myTextController,
             decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 hintText: 'Search users and rooms',
