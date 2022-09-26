@@ -8,6 +8,10 @@ class SearchPage extends StatefulWidget {
   _HomePageState createState() => new _HomePageState();
 }
 
+Future loadSearch() async {
+  print("search function sent");
+}
+
 class _HomePageState extends State<SearchPage> {
   @override
   Widget build(BuildContext context) {
@@ -34,7 +38,9 @@ class _HomePageState extends State<SearchPage> {
             style: ButtonStyle(
               foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
             ),
-            onPressed: () {},
+            onPressed: () {
+              loadSearch();
+            },
             child: Text('Search'),
           )
         ],
