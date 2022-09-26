@@ -30,9 +30,9 @@ class _HomePageState extends State<SearchPage> {
                 hintStyle: TextStyle(color: Colors.white)),
             style: TextStyle(color: Colors.white),
           ),
-          TextButton(
+          ElevatedButton(
             style: ButtonStyle(
-              foregroundColor: MaterialStateProperty.all<Color>(Colors.purple),
+              foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
             ),
             onPressed: () {},
             child: Text('Search'),
