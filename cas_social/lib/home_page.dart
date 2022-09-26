@@ -31,47 +31,61 @@ class _HomePageState extends State<HomePage> {
 
   Widget _body() {
     return new Center(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        //mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          //Dash
-          ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => DashPage()),
-                );
-              },
-              child: Text('Dashboard')),
-          //search
-          ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => SearchPage()),
-                );
-              },
-              child: Text('Search')),
-          //store
-          ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => StorePage()),
-                );
-              },
-              child: Text('Store')),
-          //settings
-          ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => SettingsPage()),
-                );
-              },
-              child: Text('Settings')),
-        ],
+      child: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            //Dash
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => DashPage()),
+                    );
+                  },
+                  child: Text('Dashboard')),
+            ),
+            //search
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => SearchPage()),
+                    );
+                  },
+                  child: Text('Search')),
+            ),
+            //store
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => StorePage()),
+                    );
+                  },
+                  child: Text('Store')),
+            ),
+            //settings
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => SettingsPage()),
+                    );
+                  },
+                  child: Text('Settings')),
+            ),
+          ],
+        ),
       ),
     );
   }
